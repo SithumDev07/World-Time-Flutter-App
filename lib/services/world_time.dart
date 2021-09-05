@@ -13,7 +13,7 @@ class WordlTime {
     required this.API_URL,
   });
 
-  void getTime() async {
+  Future<void> getTime() async {
     // * Make the resonse
     Response response =
         await get(Uri.parse('http://worldtimeapi.org/api/timezone/$API_URL'));
@@ -33,9 +33,3 @@ class WordlTime {
     time = now.toString();
   }
 }
-
-WordlTime instance = WordlTime(
-  location: "Sri Lanka",
-  flagURL: "sl.png",
-  API_URL: "Asia/Colombo",
-);
