@@ -6,24 +6,6 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
-  void getData() async {
-    // * Simulate network request for a username
-    await Future.delayed(Duration(seconds: 3), () {
-      print('Sithum');
-    });
-
-    // * Simulate network request for the bio of a username
-    Future.delayed(Duration(seconds: 2), () {
-      print('Full Stack Developer, Online Entrepreneur');
-    });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    print('init state runs');
-  }
-
   @override
   Widget build(BuildContext context) {
     print('build state runs');
@@ -37,9 +19,7 @@ class _ChooseLocationState extends State<ChooseLocation> {
       ),
       body: ElevatedButton(
         onPressed: () {
-          setState(() {
-            getData();
-          });
+          setState(() {});
         },
         child: Text('get data'),
       ),
